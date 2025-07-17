@@ -10,4 +10,4 @@
 
 ## Problems
 
-- Error if the size of the maze is too large (cause of recursion drains the stack)
+- Error if the size of the maze is too large (cause of recursion it drains the stack)
