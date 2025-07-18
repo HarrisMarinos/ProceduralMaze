@@ -30,9 +30,9 @@ class Cell {
     var j = this.j;
     if (wallDirection == Direction.UP && j - 1 >= 0) {
       return maze[i][j - 1];
-    } else if (wallDirection == Direction.RIGHT && i + 1 <= COLS - 1) {
+    } else if (wallDirection == Direction.RIGHT && i + 1 <= ROWS - 1) {
       return maze[i + 1][j];
-    } else if (wallDirection == Direction.BOTTOM && j + 1 <= ROWS - 1) {
+    } else if (wallDirection == Direction.BOTTOM && j + 1 <= COLS - 1) {
       return maze[i][j + 1];
     } else if (wallDirection == Direction.LEFT && i - 1 >= 0) {
       return maze[i - 1][j];

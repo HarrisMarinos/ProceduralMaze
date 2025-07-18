@@ -1,11 +1,11 @@
-const ROWS = 50;
-const COLS = 50;
+const ROWS = 7;
+const COLS = 3;
 // Size of each square(width, height)
 const squareWidth = 50;
 const squareHeight = 50;
 // Getting Dimensions of screen (generally good practice)
-const windowWidth = 5000;
-const windowHeight = 5000;
+const windowWidth = 800;
+const windowHeight = 800;
 // Calculating the center to print the top left first square
 const centerPositionOfX = windowWidth / 2 - (ROWS * squareWidth) / 2;
 const centerPositionOfY = windowHeight / 2 - (COLS * squareHeight) / 2;
@@ -258,10 +258,10 @@ function getAllNeighbours(cell) {
   if (j - 1 >= 0) {
     allNeighbours.push(maze[i][j - 1]);
   }
-  if (i + 1 <= COLS - 1) {
+  if (i + 1 <= ROWS - 1) {
     allNeighbours.push(maze[i + 1][j]);
   }
-  if (j + 1 <= ROWS - 1) {
+  if (j + 1 <= COLS - 1) {
     allNeighbours.push(maze[i][j + 1]);
   }
   if (i - 1 >= 0) {
@@ -275,9 +275,3 @@ function getAllNeighbours(cell) {
   }
   return allUnvisitedNeighbours;
 }
-/*Start: Begin at a random cell in the grid and mark it as visited.
-Explore: Choose a random unvisited neighbor of the current cell.
-Carve a Path: Remove the wall between the current cell and the chosen neighbor, effectively creating a path.
-Recursively Explore: Make the chosen neighbor the current cell and repeat steps 2 and 3.
-Backtrack: If the current cell has no unvisited neighbors, backtrack to the previous cell (the one that called this cell) and continue exploring.
-Complete: The process continues until all cells in the grid have been visited, resulting in a maze. */
